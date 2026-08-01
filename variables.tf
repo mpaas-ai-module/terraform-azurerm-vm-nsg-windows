@@ -32,13 +32,13 @@ variable "license_type" {
 }
 
 variable "patch_assessment_mode" {
-  type    = string
+  type = string
   default = "AutomaticByPlatform"
 
 }
 
 variable "patch_mode" {
-  type    = string
+  type = string
   default = "AutomaticByPlatform"
 }
 
@@ -60,7 +60,7 @@ variable "disk_size_gb" {
 variable "storage_image_version" {
   type        = string
   description = "Specifies the Operating System version on the OS Disk. View documentation for all options"
-  default     = "latest"
+  default = "latest"
 
 }
 
@@ -111,29 +111,17 @@ variable "nsg_rules" {
   }
 }
 
-# azurerm_recovery_services_vault
-variable "recovery_services_vault_name" {
-  type        = string
-  description = "name of the recover service vault"
-}
-variable "services_vault_resource_group_name" {
-  type        = string
-  description = "name of resource group where the recovery service vault reside in"
-}
+
 variable "keyvault_name" {
   type        = string
   description = "name of keyvault where VM password will be stored in"
 }
 variable "image_id" {
-  type = string
-
+  type        = string
+  
 }
 variable "secure_boot_enabled" {
-  type    = bool
+  type        = bool
   default = true
-
-}
-variable "environment" {
-  description = "Environment name (dev, uat, prod)"
-  type        = string
+  
 }
