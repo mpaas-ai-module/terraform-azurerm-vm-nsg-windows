@@ -121,6 +121,10 @@ variable "services_vault_resource_group_name" {
   description = "name of resource group where the recovery service vault reside in"
 }
 variable "keyvault_name" {
+  # Optional so a caller passing key_vault_id can omit it; "" turns the
+  # plan-time lookup off (see the count on the data source).
+  default = ""
+
   type        = string
   description = "name of keyvault where VM password will be stored in"
 }
